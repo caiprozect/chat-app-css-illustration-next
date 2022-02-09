@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .left-chat {
+    @apply flex max-w-[66%] items-center rounded-t-xl rounded-br-xl bg-purple-200 p-2 text-purple-500;
+    font-size: 1px;
+    line-height: 12px;
+  }
+  .right-chat {
+    @apply flex max-w-[66%] items-center rounded-t-xl rounded-bl-xl bg-gray-200 p-2 text-gray-500;
+    font-size: 1px;
+    line-height: 12px;
+  }
+
+  .left-option {
+    @apply flex max-w-[80%] items-center space-x-2 rounded-t-xl rounded-br-xl rounded-bl-md bg-purple-600 p-2.5 text-white;
+    font-size: 1px;
+  }
+
+  .left-angled {
+    clip-path: polygon(30% 0, 0 50%, 30% 100%, 60% 100%, 20% 50%, 60% 0);
+  }
+}

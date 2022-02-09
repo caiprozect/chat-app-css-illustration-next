@@ -2,81 +2,88 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="font-Rubik">
       <Head>
-        <title>Create Next App</title>
+        <title>Chat app css illustration</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <main className="bg-gray-600">
+        {/* Mobile */}
+        <section className="flex justify-center px-12 py-16">
+          {/* Mobile body */}
+          <div className="absolute h-[1.8rem] w-[9rem] rounded-full bg-white"></div>
+          <div className="flex min-h-[36rem] flex-col space-y-3 rounded-[2rem] border-[0.6rem] border-white bg-gray-200">
+            {/* Mobile screen header */}
+            <div className="flex h-[4.4rem] items-end rounded-t-[1.4rem] rounded-b-[0.4rem] bg-purple-600 text-white">
+              <div className="left-angled h-4 w-2 bg-white"></div>
+            </div>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+            {/* Mobile screen chats */}
+            <div className="flex-grow space-y-5 px-1.5">
+              <div className="space-y-2">
+                <div className="left-chat">
+                  That sounds great. I’d be happy with that.
+                </div>
+                <div className="left-chat">
+                  Could you send over some pictures of your dog, please?
+                </div>
+              </div>
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+              <div className="flex flex-col items-end justify-center space-y-2">
+                <div className="flex justify-end space-x-2">
+                  <img
+                    className="h-12 w-12 rounded-xl"
+                    src="/dog-image-1.jpg"
+                    alt=""
+                  />
+                  <img
+                    className="h-12 w-12 rounded-xl"
+                    src="/dog-image-2.jpg"
+                    alt=""
+                  />
+                  <img
+                    className="h-12 w-12 rounded-xl"
+                    src="/dog-image-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="right-chat">
+                  Here are a few pictures. She’s a happy girl!
+                </div>
+                <div className="right-chat">Can you make it?</div>
+              </div>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+              <div className="space-y-2">
+                <div className="left-chat">
+                  She looks so happy! The time we discussed works. How long
+                  shall I take her out for?
+                </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+                <div className="left-option">
+                  <div className="h-4 w-4 rounded-full border-2 border-white opacity-30"></div>
+                  <p className="mt-[1px] flex-grow opacity-60">
+                    30 minutes walk
+                  </p>
+                  <p className="pr-2 text-sm font-bold">$29</p>
+                </div>
+                <div className="left-option">
+                  <div className="h-4 w-4 rounded-full border-2 border-white opacity-30"></div>
+                  <p className="mt-[1px] flex-grow opacity-60">1 hour walk</p>
+                  <p className="pr-2 text-sm font-bold">$49</p>
+                </div>
+              </div>
+            </div>
+            <div className="px-1.5 pb-2">
+              <div className="flex h-[2.5rem] items-center rounded-full bg-white px-4">
+                <p className="text-xs text-gray-400">Type a message…</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <section>Text description</section>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
-        </a>
-      </footer>
     </div>
   )
 }
