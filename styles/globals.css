@@ -11,7 +11,7 @@
     line-height: 12px;
   }
   .right-chat {
-    @apply flex max-w-[66%] items-center rounded-t-xl rounded-bl-xl bg-gray-200 p-2 text-violet-chatRight;
+    @apply flex max-w-[66%] items-center rounded-t-xl rounded-bl-xl bg-white p-2 text-violet-chatRight shadow-md;
     font-size: 1px;
     line-height: 12px;
   }
@@ -47,7 +47,7 @@
   }
 
   .loading {
-    background: linear-gradient(to right, #8838ff 50%, white 50%);
+    background: linear-gradient(to right, #e942ff 50%, white 50%);
     background-size: 200%;
     background-position: bottom left;
     animation: loading 1s ease-out 1;
@@ -91,9 +91,13 @@
   }
   @keyframes loading {
     from {
+      background: linear-gradient(to right, #8838ff 50%, white 50%);
+      background-size: 200%;
       background-position: bottom right;
     }
     to {
+      background: linear-gradient(to right, #e942ff 50%, white 50%);
+      background-size: 200%;
       background-position: bottom left;
     }
   }

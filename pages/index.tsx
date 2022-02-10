@@ -51,17 +51,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-gray-600">
+      <main className="bg-violet-appBg relative overflow-clip">
+
+        <span className="absolute h-[60rem] w-[30rem] -top-[24rem] -left-[18rem] rounded-full bg-gradient-to-t from-violet-gradientHeavy to-violet-gradientLight"></span>
+        <span className="absolute h-[60rem] w-[30rem] top-full left-full -mt-[32rem] -ml-[11.8rem]  rounded-full bg-purple-200"></span>
+
         {/* Mobile */}
-        <section className="flex justify-center px-12 py-16">
+        <section className="relative flex justify-center px-12 pt-16">
           {/* Mobile body */}
           <div className="absolute h-[1.8rem] w-[9rem] rounded-full bg-white"></div>
-          <div className="flex min-h-[36rem] flex-col space-y-3 rounded-[2rem] border-[0.6rem] border-white bg-violet-appBg">
+          <div className="flex min-h-[36rem] flex-col space-y-3 rounded-[2rem] border-[0.6rem] border-white bg-violet-appBg shadow-2xl">
             {/* Mobile screen header */}
             <div className={"flex h-[4.4rem] items-end rounded-t-[1.4rem] rounded-b-[0.4rem] text-white headGradient " + `${
               animationBreak('hidden', 'loading.0', 'loading', '')
             }`}>
-              <div className="flex h-[3rem] w-full items-center space-x-2 px-4">
+              <div className={"flex h-[3rem] w-full items-center space-x-2 px-4" + ` ${stage.startsWith('loading') ? 'hidden' : 'visible'}`}>
                 <div className="h-6 w-2 opacity-75">&#10096;</div>
                 <img
                   className="h-7 w-7 rounded-full border-2 border-white border-opacity-60"
@@ -125,14 +129,14 @@ export default function Home() {
                   shall I take her out for?
                 </div>
 
-                <div className={`left-option ${animationBreak('opacity-0', 'option.1', 'appear', '')}`}>
+                <div className={`left-option ${animationBreak('opacity-0', 'option.1', 'loading', '')}`}>
                   <div className="h-4 w-4 rounded-full border-2 border-white opacity-30"></div>
                   <p className="mt-[1px] flex-grow opacity-60">
                     30 minutes walk
                   </p>
                   <p className="pr-2 text-sm font-medium opacity-90">$29</p>
                 </div>
-                <div className={`left-option ${animationBreak('opacity-0', 'option.2', 'appear', '')}`}>
+                <div className={`left-option ${animationBreak('opacity-0', 'option.2', 'loading', '')}`}>
                   <div className="h-4 w-4 rounded-full border-2 border-white opacity-30"></div>
                   <p className="mt-[1px] flex-grow opacity-60">1 hour walk</p>
                   <p className="pr-2 text-sm font-medium opacity-90">$49</p>
@@ -186,9 +190,9 @@ export default function Home() {
                       Type a message…
                     </p>
                   </div>
-                  <div className={`${stage.startsWith('submit') ? 'clicked' : ''}
+                  <div className={`${stage.startsWith('submit') ? 'clicked' : ''} ${stage.startsWith('loading') ? 'loading' : ''}
                    flex h-8 w-8 items-center justify-center rounded-full bg-violet-submit text-lg font-bold text-white`}>
-                    <span className={`opacity-90 ${stage.startsWith('loading') ? 'animate-spin' : ''}`}>&gt;</span>
+                    <span className={`opacity-90 ${stage.startsWith('loading') ? 'hidden' : 'visible'}`}>&gt;</span>
                   </div>
                 </div>
               </div>
@@ -196,7 +200,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section>Text description</section>
+        {/* Description */}
+        <section className="flex flex-col items-center pt-12 pb-16 space-y-6 relative">
+          <h1 className="text-[2.5rem] font-bold text-violet-mainHeading">Simple booking</h1>
+          <p className='text-center max-w-[20rem] text-[1.2rem] text-violet-paragraph'>
+            Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+            discuss arrangements and make bookings. Once the walk has been completed you can rate 
+            your walker and book again all through the chat.
+          </p>
+        </section>
       </main>
     </div>
   )

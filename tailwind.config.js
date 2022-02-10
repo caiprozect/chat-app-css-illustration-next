@@ -16,6 +16,8 @@ module.exports = {
           placeholder: '#c6cacd',
           submit: '#3e2753',
           radio: '#e570ff',
+          mainHeading: '#3e2753',
+          paragraph: '#a39daa',
         },
       },
       fontFamily: {
