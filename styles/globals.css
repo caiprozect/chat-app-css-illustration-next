@@ -17,7 +17,7 @@
   }
 
   .left-option {
-    @apply flex max-w-[80%] items-center space-x-2 rounded-t-xl rounded-br-xl rounded-bl-md bg-gradient-to-r from-violet-gradientLight to-violet-gradientHeavy p-2.5 text-white;
+    @apply flex max-w-[80%] items-center space-x-2 rounded-t-xl rounded-br-xl rounded-bl-md bg-gradient-to-r from-violet-gradientLight to-violet-gradientHeavy p-2.5 text-white shadow-md;
     font-size: 1px;
   }
 
@@ -51,6 +51,24 @@
     background-size: 200%;
     background-position: bottom left;
     animation: loading 1s ease-out 1;
+  }
+
+  @media (min-width: 768px) {
+    .left-chat {
+      @apply flex max-w-[66%] items-center rounded-t-2xl rounded-br-2xl bg-purple-200 p-2 pl-3 text-violet-chatLeft;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    .right-chat {
+      @apply flex max-w-[66%] items-center rounded-t-2xl rounded-bl-2xl bg-white p-2 pr-3 text-violet-chatRight shadow-md;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    .left-option {
+      @apply flex max-w-[80%] items-center space-x-3 rounded-t-2xl rounded-br-2xl rounded-bl-md bg-gradient-to-r from-violet-gradientLight to-violet-gradientHeavy p-2.5 pl-3 text-white shadow-md;
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 
   @keyframes typeout {
