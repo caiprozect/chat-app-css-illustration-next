@@ -55,9 +55,9 @@ export default function Home() {
 
         {/* Background patterns */}
         <span className="absolute h-[60rem] w-[30rem] -top-[24rem] -left-[18rem] rounded-full bg-gradient-to-t from-violet-gradientHeavy to-violet-gradientLight
-        md:-left-[6rem]"></span>
+        md:-left-[6rem] md:h-[70rem] md:w-[40rem]"></span>
         <span className="absolute h-[60rem] w-[30rem] top-full left-full -mt-[32rem] -ml-[11.8rem]  rounded-full bg-purple-200
-        md:-ml-[30rem]"></span>
+        md:-ml-[30rem] md:h-[70rem] md:w-[40rem]"></span>
 
         {/* Mobile */}
         <section className="relative flex justify-center px-12 pt-16 md:pt-0">
